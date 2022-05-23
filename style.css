@@ -11,16 +11,17 @@ body {
   background-color: #38404b;
   font-family: "Ubuntu", sans-serif;
   color: #94ADCF;
+  padding-top: 56px;
+  padding-bottom: 65px;
+  padding-left: 29px;
+  padding-right: 29px;
+  align-items: center;
 }
 
 #header-my__tasks {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 56px;
-  margin-left: 29px;
-  margin-right: 29px;
-  margin-bottom: 65px;
 }
 
 #header-menu__icon {
@@ -34,12 +35,104 @@ body {
 .bar2,
 .bar3 {
   background-color: #94adcf;
-  width: 28px;
+
   height: 5px;
   border-radius: 5px;
   align-self: flex-end;
 }
 
+.bar1 {
+  width: 28px;
+}
+
 .bar2 {
   width: 40px;
+}
+
+.bar3 {
+  width: 23px;
+}
+
+.task__list-incompleted {
+  margin-top: 54px;
+}
+
+.task__list__item-incompleted {
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  background: #38404B;
+  box-shadow: -5px 5px 10px rgba(48, 54, 64, 0.2), 5px -5px 10px rgba(48, 54, 64, 0.2), -5px -5px 10px rgba(64, 74, 86, 0.9), 5px 5px 13px rgba(48, 54, 64, 0.9), inset 1px 1px 2px rgba(64, 74, 86, 0.3), inset -1px -1px 2px rgba(48, 54, 64, 0.5);
+  margin-bottom: 31px;
+}
+
+.task__list__item-incompleted:hover {
+  transform: brightness(1.5);
+}
+
+.task__list__item-input {
+  width: 1.3em;
+  height: 1.3em;
+  margin-left: 13px;
+  margin-right: 13px;
+  background-color: #38404B;
+  border: 2px solid #94ADCF;
+  border-radius: 50%;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.task__list__item-input:checked {
+  background-color: #94ADCF;
+}
+
+.task__list-completed {
+  margin-top: 49px;
+}
+
+#completed__list-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+}
+
+.task__list__item-completed {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  background: #38404B;
+  box-shadow: 1px 1px 2px rgba(64, 74, 86, 0.3), -1px -1px 2px rgba(48, 54, 64, 0.5), inset -5px 5px 10px rgba(48, 54, 64, 0.2), inset 5px -5px 10px rgba(48, 54, 64, 0.2), inset -5px -5px 10px rgba(64, 74, 86, 0.9), inset 5px 5px 13px rgba(48, 54, 64, 0.9);
+  text-decoration: line-through;
+}
+
+#open__modal-input {
+  position: fixed;
+  right: 31px;
+  bottom: 65px;
+  width: 60px;
+  height: 60px;
+  background: #38404B;
+  box-shadow: -1px 1px 2px rgba(22, 26, 30, 0.2), 1px -1px 2px rgba(22, 26, 30, 0.2), -1px -1px 2px rgba(90, 102, 120, 0.9), 1px 1px 3px rgba(22, 26, 30, 0.9), inset 1px 1px 2px rgba(90, 102, 120, 0.3), inset -1px -1px 2px rgba(22, 26, 30, 0.5);
+  border-radius: 50px;
+}
+
+.open__modal-input__line-x {
+  position: absolute;
+  width: 24px;
+  height: 2.8px;
+  border-radius: 40px;
+  background-color: #94ADCF;
+  margin: 0 auto;
+}
+
+.open__modal-input__line-y {
+  position: absolute;
+  width: 24px;
+  height: 2.8px;
+  border-radius: 40px;
+  background-color: #94ADCF;
+  transform: rotate(-90deg);
 }
