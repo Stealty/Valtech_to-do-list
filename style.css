@@ -1,8 +1,45 @@
-#app {
+/* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+} */
+
+body {
+  background-color: #38404b;
+  font-family: "Ubuntu", sans-serif;
+  color: #94ADCF;
+}
+
+#header-my__tasks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 56px;
+  margin-left: 29px;
+  margin-right: 29px;
+  margin-bottom: 65px;
+}
+
+#header-menu__icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  background-color: #94adcf;
+  width: 28px;
+  height: 5px;
+  border-radius: 5px;
+  align-self: flex-end;
+}
+
+.bar2 {
+  width: 40px;
 }
