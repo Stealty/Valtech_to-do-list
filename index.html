@@ -27,12 +27,19 @@
       </div>
     </section>
     <footer>
-      <button type="button" id="open__modal-input">
-        <div class="open__modal-input__line-x"></div>
-        <div class="open__modal-input__line-y"></div>
+      <button type="button" id="open__modal-button-close" onclick="openModal()">
+        <div class="open__modal-input__line-x-close"></div>
+        <div class="open__modal-input__line-y-close"></div>
       </button>
 
-      <div class="modal"></div>
+      <div class="modal">
+        <form action="" class="addTask-form">
+          <input type="text" value="Add new task" class="addTask-input" />
+          <button type="submit" value="" class="addTask-button">
+            <img src="submit-arrow.svg" alt="" id="submit-arrow" />
+          </button>
+        </form>
+      </div>
     </footer>
 
     <!-- <div id="app"></div> -->
