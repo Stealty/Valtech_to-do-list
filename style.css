@@ -121,6 +121,7 @@ body {
 
 .open__modal-input__line-x {
   position: absolute;
+  left: 27%;
   width: 24px;
   height: 2.8px;
   border-radius: 40px;
@@ -130,6 +131,7 @@ body {
 
 .open__modal-input__line-y {
   position: absolute;
+  left: 27%;
   width: 24px;
   height: 2.8px;
   border-radius: 40px;
