@@ -7,7 +7,7 @@
   margin-top: 60px;
 } */
 
-body {
+.my__tasks-body {
   background-color: #38404b;
   font-family: "Ubuntu", sans-serif;
   color: #94ADCF;
@@ -16,6 +16,7 @@ body {
   padding-left: 29px;
   padding-right: 29px;
   align-items: center;
+  animation: pageLoader 2s ease-in-out;
 }
 
 #header-my__tasks {
@@ -55,6 +56,7 @@ body {
 
 .task__list-incompleted {
   margin-top: 54px;
+
 }
 
 .task__list__item-incompleted {
@@ -64,7 +66,6 @@ body {
   background: #38404B;
   box-shadow: -5px 5px 10px rgba(48, 54, 64, 0.2), 5px -5px 10px rgba(48, 54, 64, 0.2), -5px -5px 10px rgba(64, 74, 86, 0.9), 5px 5px 13px rgba(48, 54, 64, 0.9), inset 1px 1px 2px rgba(64, 74, 86, 0.3), inset -1px -1px 2px rgba(48, 54, 64, 0.5);
   margin-bottom: 31px;
-
 }
 
 .task__list__item-incompleted:hover {
@@ -109,7 +110,7 @@ body {
   text-decoration: line-through;
 }
 
-#open__modal-button-open {
+.open__modal-button-open {
   z-index: 6;
   position: fixed;
   right: 31px;
@@ -122,7 +123,7 @@ body {
   border: 1px solid;
 }
 
-#open__modal-button-close {
+.open__modal-button-close {
   z-index: 6;
   position: fixed;
   right: 31px;
@@ -144,6 +145,8 @@ body {
   border-radius: 40px;
   background-color: #94ADCF;
   margin: 0 auto;
+  transform: rotate(0deg);
+  animation: rotateButtonX-open 1.5s ease-in-out;
 }
 
 .open__modal-input__line-y-open {
@@ -154,6 +157,7 @@ body {
   border-radius: 40px;
   background-color: #94ADCF;
   transform: rotate(-90deg);
+  animation: rotateButtonY-open 1.5s ease-in-out;
 }
 
 .open__modal-input__line-x-close {
@@ -165,7 +169,7 @@ body {
   background-color: #38404B;
   margin: 0 auto;
   transform: rotate(45deg);
-  animation: rotateButtonX 1.5s ease-in-out;
+  animation: rotateButtonX-close 1.5s ease-in-out;
 }
 
 .open__modal-input__line-y-close {
@@ -176,7 +180,7 @@ body {
   border-radius: 40px;
   background-color: #38404B;
   transform: rotate(130deg);
-  animation: rotateButtonY 1.5s ease-in-out;
+  animation: rotateButtonY-close 1.5s ease-in-out;
 }
 
 .modal {
@@ -187,7 +191,7 @@ body {
   top: 0;
   left: 0;
   backdrop-filter: blur(4px);
-  display: block;
+  display: none;
 }
 
 
@@ -242,17 +246,21 @@ body {
 
 @keyframes setUp {
   0% {
-    /* opacity: 0; */
     transform: translateY(100vh);
   }
 
-  50% {
-    /* opacity: 0; */
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes setDown {
+  0% {
+    transform: translateY(0);
   }
 
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateY(100vh);
   }
 }
 
@@ -266,7 +274,7 @@ body {
   }
 }
 
-@keyframes rotateButtonX {
+@keyframes rotateButtonX-close {
   0% {
     transform: rotate(90deg);
   }
@@ -276,12 +284,43 @@ body {
   }
 }
 
-@keyframes rotateButtonY {
+@keyframes rotateButtonY-close {
   0% {
     transform: rotate(0deg);
   }
 
   100% {
     transform: rotate(130deg);
+  }
+}
+
+
+@keyframes rotateButtonX-open {
+  0% {
+    transform: rotate(130deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotateButtonY-open {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes pageLoader {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }

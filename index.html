@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
     <title>To do List</title>
   </head>
-  <body>
+  <body class="my__tasks-body">
     <header id="header-my__tasks">
       <h1>My Tasks</h1>
       <div id="header-menu__icon">
@@ -27,15 +27,31 @@
       </div>
     </section>
     <footer>
-      <button type="button" id="open__modal-button-close" onclick="openModal()">
-        <div class="open__modal-input__line-x-close"></div>
-        <div class="open__modal-input__line-y-close"></div>
+      <button
+        type="submit"
+        class="open__modal-button-open"
+        id="toggleModal-button"
+        onclick="toggleModal()"
+      >
+        <div
+          class="open__modal-input__line-x-open"
+          id="open__modal-input__line-x"
+        ></div>
+        <div
+          class="open__modal-input__line-y-open"
+          id="open__modal-input__line-y"
+        ></div>
       </button>
 
       <div class="modal">
         <form action="" class="addTask-form">
           <input type="text" value="Add new task" class="addTask-input" />
-          <button type="submit" value="" class="addTask-button">
+          <button
+            type="button"
+            value=""
+            class="addTask-button"
+            onclick="addNewTask()"
+          >
             <img src="submit-arrow.svg" alt="" id="submit-arrow" />
           </button>
         </form>
@@ -45,5 +61,6 @@
     <!-- <div id="app"></div> -->
     <!-- <script type="module" src="/main.js"></script> -->
     <script src="./script.js"></script>
+    <script src="./toggleModal.js"></script>
   </body>
 </html>
