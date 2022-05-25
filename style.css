@@ -59,6 +59,12 @@
 
 }
 
+.taskList__list-incompleted {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
 .task__list__item-incompleted {
   display: flex;
   align-items: center;
@@ -66,6 +72,7 @@
   background: #38404B;
   box-shadow: -5px 5px 10px rgba(48, 54, 64, 0.2), 5px -5px 10px rgba(48, 54, 64, 0.2), -5px -5px 10px rgba(64, 74, 86, 0.9), 5px 5px 13px rgba(48, 54, 64, 0.9), inset 1px 1px 2px rgba(64, 74, 86, 0.3), inset -1px -1px 2px rgba(48, 54, 64, 0.5);
   margin-bottom: 31px;
+  margin-left: -40px;
 }
 
 .task__list__item-incompleted:hover {
