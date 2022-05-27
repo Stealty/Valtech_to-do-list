@@ -251,6 +251,17 @@
   box-shadow: 3px 3px 4px rgba(64, 74, 86, 0.3), -3px -3px 4px rgba(48, 54, 64, 0.5), inset -7px 7px 12px rgba(48, 54, 64, 0.2), inset 7px -7px 12px rgba(48, 54, 64, 0.2), inset -7px -7px 12px rgba(64, 74, 86, 0.9), inset 7px 7px 15px rgba(48, 54, 64, 0.9);
 }
 
+.taskList__button--delete {
+  position: inherit;
+  background-color: #38404B;
+  color: #94ADCF;
+  border: 0px;
+  text-decoration: none;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
 .taskList__item--label {
   display: flex;
   align-items: center;
@@ -551,7 +562,4 @@
   .myTasks__header {
     justify-content: space-between;
   }
-
-
-
 }

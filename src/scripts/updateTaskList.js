@@ -1,4 +1,6 @@
 function updateTaskList() {
+  completedList.innerHTML = "";
+  incompletedList.innerHTML = "";
   taskList.sort((a, b) => a.taskName.localeCompare(b.taskName));
   taskList.forEach((task) => {
     if (task.value === false) {

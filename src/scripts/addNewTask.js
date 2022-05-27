@@ -105,6 +105,11 @@ function createNewTaskItem_completed({ taskName, id }) {
   let taskItem = document.createElement("li");
   let newInputCheckBox = document.createElement("input");
   let newItem = document.createElement("label");
+  let deleteTaskButton = document.createElement("button");
+  deleteTaskButton.setAttribute("class", "taskList__button--delete");
+  deleteTaskButton.setAttribute("type", "button");
+  deleteTaskButton.addEventListener("click", () => deleteTask(id));
+  deleteTaskButton.appendChild(document.createTextNode("X"));
   newItem.setAttribute("for", "taskList__item--checkbox");
   newItem.setAttribute("class", "taskList__item--label");
   newItem.appendChild(document.createTextNode(taskName));
@@ -116,6 +121,7 @@ function createNewTaskItem_completed({ taskName, id }) {
   taskItem.addEventListener("click", () => validateTask(id));
   taskItem.appendChild(newInputCheckBox);
   taskItem.appendChild(newItem);
+  taskItem.appendChild(deleteTaskButton);
   completedList.appendChild(taskItem);
 }
 

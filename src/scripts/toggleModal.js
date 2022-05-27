@@ -17,7 +17,7 @@ function disable() {
   document.querySelector(".myTasks__body").style.overflowY = "hidden";
 }
 
-toggleModal = () => {
+modalButton.addEventListener("click", () => {
   if (modal.style.display === "none") {
     modal.style.display = "block";
     modalButton.setAttribute("class", "modal__button--close");
@@ -31,7 +31,7 @@ toggleModal = () => {
     modalButtonAxisY.setAttribute("class", "modal__inputLine__y--open");
     enable();
   }
-};
+});
 
 addEventListener("resize", () => {
   modal.style.display = "none";
