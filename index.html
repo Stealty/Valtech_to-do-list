@@ -2,12 +2,83 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="./src/styles/style.css" />
+    <title>To do List</title>
   </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+  <body class="myTasks__body">
+    <header class="myTasks__header">
+      <h1 class="myTasks__title">My Tasks</h1>
+      <form action="" class="addTask__Form--desktop">
+        <input
+          type="text"
+          placeholder="Add new task"
+          class="addTask__input--desktop"
+        />
+        <button
+          type="button"
+          value=""
+          class="addTask__button--desktop"
+          onclick="addNewTaskDesktop()"
+        >
+          <img
+            src="/images/submit-arrow.svg"
+            alt=""
+            class="submitArrow--desktop"
+          />
+        </button>
+      </form>
+
+      <div class="menu__header--icon">
+        <div class="menu__header--bar1"></div>
+        <div class="menu__header--bar2"></div>
+        <div class="menu__header--bar3"></div>
+      </div>
+    </header>
+    <h2 class="incompleted__list--title">Incompleted</h2>
+    <section class="task__list--incompleted">
+      <ul class="taskList__list--incompleted"></ul>
+    </section>
+
+    <section class="task__list--completed">
+      <h2 class="completed__list--title">Completed</h2>
+
+      <section class="task__list--completed">
+        <ul class="taskList__list--completed"></ul>
+      </section>
+    </section>
+
+    <footer>
+      <button
+        type="submit"
+        class="modal__button--open"
+        id="toggleModal--button"
+      >
+        <div class="modal__inputLine__x--open" id="modal__inputLine--x"></div>
+        <div class="modal__inputLine__y--open" id="modal__inputLine--y"></div>
+      </button>
+      <div class="modal">
+        <form class="addTask__form--modal">
+          <input
+            type="text"
+            class="addTask__input--modal"
+            placeholder="Add new task"
+          />
+          <button
+            type="button"
+            class="addTask__button--modal"
+            onclick="addNewTaskModal()"
+          >
+            <img src="/images/submit-arrow.svg" alt="" class="submitArrow" />
+          </button>
+        </form>
+      </div>
+    </footer>
+    <script src="./src/scripts/addNewTask.js"></script>
+    <script src="./src/scripts/localData.js"></script>
+    <script src="./src/scripts/toggleModal.js"></script>
+    <script src="./src/scripts/toggleTask.js"></script>
+    <script src="./src/scripts/updateTaskList.js"></script>
   </body>
 </html>
