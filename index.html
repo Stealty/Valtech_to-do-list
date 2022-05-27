@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="./src/styles/style.css" />
     <title>To do List</title>
   </head>
-  <body class="my__tasks-body" id="app">
-    <header id="header-my__tasks">
+  <body class="myTasks__body">
+    <header class="myTasks__header">
       <h1 class="myTasks__title">My Tasks</h1>
       <form action="" class="addTask__Form--desktop">
         <input
@@ -25,48 +25,42 @@
           <img
             src="/images/submit-arrow.svg"
             alt=""
-            class="submit-arrow--desktop"
+            class="submitArrow--desktop"
           />
         </button>
       </form>
 
-      <div id="header-menu__icon">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
+      <div class="menu__header--icon">
+        <div class="menu__header--bar1"></div>
+        <div class="menu__header--bar2"></div>
+        <div class="menu__header--bar3"></div>
       </div>
     </header>
-    <h2 id="completed__list-title">Incompleted</h2>
-    <section class="task__list-incompleted">
-      <ul id="taskList__list-incompleted"></ul>
+    <h2 class="incompleted__list--title">Incompleted</h2>
+    <section class="task__list--incompleted">
+      <ul class="taskList__list--incompleted"></ul>
     </section>
 
-    <section class="task__list-completed">
-      <h2 id="completed__list-title">Completed</h2>
+    <section class="task__list--completed">
+      <h2 class="completed__list--title">Completed</h2>
 
-      <section class="task__list-completed">
-        <ul id="taskList__list-completed"></ul>
+      <section class="task__list--completed">
+        <ul class="taskList__list--completed"></ul>
       </section>
     </section>
+
     <footer>
       <button
         type="submit"
-        class="open__modal-button-open"
-        id="toggleModal-button"
+        class="modal__button--open"
+        id="toggleModal--button"
         onclick="toggleModal()"
       >
-        <div
-          class="open__modal-input__line-x-open"
-          id="open__modal-input__line-x"
-        ></div>
-        <div
-          class="open__modal-input__line-y-open"
-          id="open__modal-input__line-y"
-        ></div>
+        <div class="modal__inputLine__x--open" id="modal__inputLine--x"></div>
+        <div class="modal__inputLine__y--open" id="modal__inputLine--y"></div>
       </button>
-      <label for=""></label>
       <div class="modal">
-        <form class="addTask_form--modal">
+        <form class="addTask__form--modal">
           <input
             type="text"
             class="addTask__input--modal"
@@ -77,7 +71,7 @@
             class="addTask__button--modal"
             onclick="addNewTaskModal()"
           >
-            <img src="/images/submit-arrow.svg" alt="" class="submit-arrow" />
+            <img src="/images/submit-arrow.svg" alt="" class="submitArrow" />
           </button>
         </form>
       </div>
