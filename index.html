@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./src/styles/style.css" />
     <title>To do List</title>
   </head>
-  <body class="my__tasks-body">
+  <body class="my__tasks-body" id="app">
     <header id="header-my__tasks">
       <h1 class="myTasks__title">My Tasks</h1>
       <form action="" class="addTask__Form--desktop">
@@ -23,7 +23,7 @@
           onclick="addNewTaskDesktop()"
         >
           <img
-            src="./public/images/submit-arrow.svg"
+            src="/images/submit-arrow.svg"
             alt=""
             class="submit-arrow--desktop"
           />
@@ -77,11 +77,7 @@
             class="addTask__button--modal"
             onclick="addNewTaskModal()"
           >
-            <img
-              src="./public/images/submit-arrow.svg"
-              alt=""
-              class="submit-arrow"
-            />
+            <img src="/images/submit-arrow.svg" alt="" class="submit-arrow" />
           </button>
         </form>
       </div>
@@ -90,9 +86,7 @@
     <script src="./src/scripts/addNewTask.js"></script>
     <script src="./src/scripts/toggleModal.js"></script>
     <script src="./src/scripts/toggleTask.js"></script>
-    <script src="./src/scripts/localStorage.js"></script>
+    <script src="./src/scripts/localData.js"></script>
     <script src="./src/scripts/updateTaskList.js"></script>
-    <script src="../../main.js"></script>
   </body>
 </html>
-<!-- <div id="app"></div> -->

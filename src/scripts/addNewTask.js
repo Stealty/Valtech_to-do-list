@@ -1,5 +1,3 @@
-let taskList = [];
-
 const incompletedList = document.getElementById("taskList__list-incompleted");
 const completedList = document.getElementById("taskList__list-completed");
 
@@ -8,6 +6,8 @@ const addTaskInputDesktop = document.querySelector(".addTask__input--desktop");
 
 const addTaskFormModal = document.querySelector(".addTask_form--modal");
 const addTaskInputModal = document.querySelector(".addTask__input--modal");
+
+let taskList = [];
 
 window.addEventListener("load", () => {
   loadData();
@@ -25,6 +25,7 @@ function addNewTaskDesktop() {
       value: false,
     };
     taskList.push(newTask);
+    addTaskInputModal.value = "";
     addTaskInputDesktop.value = "";
     modal.style.display = "none";
     modalButton.setAttribute("class", "open__modal-button-open");
@@ -50,6 +51,7 @@ function addNewTaskModal() {
     };
     taskList.push(newTask);
     addTaskInputModal.value = "";
+    addTaskInputDesktop.value = "";
     modal.style.display = "none";
     modalButton.setAttribute("class", "open__modal-button-open");
     modalButtonAxisX.setAttribute("class", "open__modal-input__line-x-open");
