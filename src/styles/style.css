@@ -105,6 +105,7 @@
   align-items: center;
   animation: pageLoader 2s ease-in-out;
   max-width: 1280px;
+  overflow-y: scroll;
 }
 
 #header-my__tasks {

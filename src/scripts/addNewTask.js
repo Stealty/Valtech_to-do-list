@@ -9,18 +9,6 @@ const addTaskInputDesktop = document.querySelector(".addTask__input--desktop");
 const addTaskFormModal = document.querySelector(".addTask_form--modal");
 const addTaskInputModal = document.querySelector(".addTask__input--modal");
 
-function updateTaskList() {
-  taskList.sort((a, b) => a.taskName.localeCompare(b.taskName));
-  taskList.forEach((task) => {
-    if (task.value === false) {
-      createNewTaskItem_incompleted(task);
-    }
-    if (task.value === true) {
-      createNewTaskItem_completed(task);
-    }
-  });
-}
-
 window.addEventListener("load", () => {
   loadData();
   updateTaskList();
@@ -92,10 +80,6 @@ addTaskFormModal.addEventListener("submit", (event) => {
   }
 });
 
-function generateId() {
-  return Math.max(...taskList.map((task) => task.id), 0) + 1;
-}
-
 function createNewTaskItem_incompleted({ taskName, id }) {
   let taskItem = document.createElement("li");
   let newInputCheckBox = document.createElement("input");
@@ -131,25 +115,10 @@ function createNewTaskItem_completed({ taskName, id }) {
   completedList.appendChild(taskItem);
 }
 
-function saveData() {
-  localStorage.setItem("taskList", JSON.stringify(taskList));
-}
-
-function loadData() {
-  try {
-    taskList = JSON.parse(localStorage.getItem("taskList")) ?? [];
-  } catch {
-    taskList = [];
-  }
-}
-
 function uppercaseFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-addEventListener("resize", () => {
-  modal.style.display = "none";
-  modalButton.setAttribute("class", "open__modal-button-open");
-  modalButtonAxisX.setAttribute("class", "open__modal-input__line-x-open");
-  modalButtonAxisY.setAttribute("class", "open__modal-input__line-y-open");
-});
+function generateId() {
+  return Math.max(...taskList.map((task) => task.id), 0) + 1;
+}
