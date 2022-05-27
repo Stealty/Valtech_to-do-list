@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="app">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -9,7 +9,23 @@
   </head>
   <body class="my__tasks-body">
     <header id="header-my__tasks">
-      <h1>My Tasks</h1>
+      <h1 class="myTasks__title">My Tasks</h1>
+      <form action="" class="addTask__Form--desktop">
+        <input
+          type="text"
+          placeholder="Add new task"
+          class="addTask__input--desktop"
+        />
+        <button
+          type="button"
+          value=""
+          class="addTask__button--desktop"
+          onclick="addNewTaskDesktop()"
+        >
+          <img src="submit-arrow.svg" alt="" class="submit-arrow--desktop" />
+        </button>
+      </form>
+
       <div id="header-menu__icon">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -46,15 +62,18 @@
       </button>
 
       <div class="modal">
-        <form action="" class="addTask-form">
-          <input type="text" value="Add new task" class="addTask-input" />
+        <form class="addTask_form--modal">
+          <input
+            type="text"
+            class="addTask__input--modal"
+            placeholder="Add new task"
+          />
           <button
             type="button"
-            value=""
-            class="addTask-button"
-            onclick="addNewTask()"
+            class="addTask__button--modal"
+            onclick="addNewTaskModal()"
           >
-            <img src="submit-arrow.svg" alt="" id="submit-arrow" />
+            <img src="submit-arrow.svg" alt="" class="submit-arrow" />
           </button>
         </form>
       </div>
@@ -65,5 +84,6 @@
     <script src="./addNewTask.js"></script>
     <script src="./toggleModal.js"></script>
     <script src="./toggleTask.js"></script>
+    <script src="../../main.js"></script>
   </body>
 </html>
