@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" id="app">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
     <title>To do List</title>
   </head>
   <body class="my__tasks-body">
@@ -22,7 +22,11 @@
           class="addTask__button--desktop"
           onclick="addNewTaskDesktop()"
         >
-          <img src="submit-arrow.svg" alt="" class="submit-arrow--desktop" />
+          <img
+            src="./public/images/submit-arrow.svg"
+            alt=""
+            class="submit-arrow--desktop"
+          />
         </button>
       </form>
 
@@ -73,17 +77,20 @@
             class="addTask__button--modal"
             onclick="addNewTaskModal()"
           >
-            <img src="submit-arrow.svg" alt="" class="submit-arrow" />
+            <img
+              src="./public/images/submit-arrow.svg"
+              alt=""
+              class="submit-arrow"
+            />
           </button>
         </form>
       </div>
     </footer>
-
-    <!-- <div id="app"></div> -->
-    <!-- <script type="module" src="/main.js"></script> -->
-    <script src="./addNewTask.js"></script>
-    <script src="./toggleModal.js"></script>
-    <script src="./toggleTask.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script src="./src/scripts/addNewTask.js"></script>
+    <script src="./src/scripts/toggleModal.js"></script>
+    <script src="./src/scripts/toggleTask.js"></script>
     <script src="../../main.js"></script>
   </body>
 </html>
+<!-- <div id="app"></div> -->
