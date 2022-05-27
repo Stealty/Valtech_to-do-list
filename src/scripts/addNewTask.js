@@ -33,8 +33,6 @@ function addNewTaskDesktop() {
     modalButtonAxisY.setAttribute("class", "open__modal-input__line-y-open");
     saveData();
     createNewTaskItem_incompleted(newTask);
-    completedList.innerHTML = "";
-    incompletedList.innerHTML = "";
     updateTaskList();
   }
 }
@@ -58,8 +56,6 @@ function addNewTaskModal() {
     modalButtonAxisY.setAttribute("class", "modal__inputLine__y--open");
     saveData();
     createNewTaskItem_incompleted(newTask);
-    completedList.innerHTML = "";
-    incompletedList.innerHTML = "";
     updateTaskList();
   }
 }
