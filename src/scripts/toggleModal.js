@@ -10,11 +10,11 @@ window.addEventListener("load", () => {
 });
 
 function enable() {
-  document.querySelector(".my__tasks-body").style.overflow = "scroll";
+  document.querySelector(".my__tasks-body").style.overflowY = "scroll";
 }
 
 function disable() {
-  document.querySelector(".my__tasks-body").style.overflow = "hidden";
+  document.querySelector(".my__tasks-body").style.overflowY = "hidden";
 }
 
 toggleModal = () => {

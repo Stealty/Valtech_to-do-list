@@ -88,6 +88,7 @@ function createNewTaskItem_incompleted({ taskName, id }) {
   let newItem = document.createElement("label");
   newItem.setAttribute("for", "task__list__item-checkbox");
   newItem.setAttribute("class", "task__list__item-label");
+  newItem.setAttribute("unselectable", "on");
   newItem.appendChild(document.createTextNode(taskName));
   taskItem.setAttribute("class", "task__list__item-incompleted");
   newInputCheckBox.setAttribute("class", "task__list__item-input");
