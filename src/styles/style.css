@@ -1,19 +1,10 @@
-/* #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-} */
-
 @keyframes setUp {
-  0% {
-    transform: translateY(100vh);
+  from {
+    opacity: 0;
   }
 
-  100% {
-    transform: translateY(0);
+  to {
+    opacity: 1;
   }
 }
 
@@ -91,6 +82,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 
@@ -166,7 +158,6 @@
 
 .taskList--incompleted {
   margin-top: 54px;
-
 }
 
 .taskList__list--incompleted {
@@ -361,12 +352,11 @@
   background-color: #38404ba4;
 }
 
-.addTask__form--modal {
+.addTask__Form--desktop {
   display: flex;
-  align-items: center;
 }
 
-.addTask__form--desktop {
+.addTask__form--modal {
   display: flex;
   align-items: center;
 }
@@ -413,18 +403,13 @@
 }
 
 .addTask__button--modal {
-  z-index: 6;
-  position: absolute;
-  right: 38px;
-  top: 187px;
+  margin-left: -65px;
+  margin-top: 150px;
+  height: 10px;
+  z-index: 7;
   background-color: #38404B;
   border: 0px;
-  animation: setUp 1.5s ease-in-out;
   cursor: pointer;
-}
-
-.addTask__Form--desktop {
-  display: flex;
 }
 
 .submitArrow {
@@ -485,16 +470,16 @@
 
 
 @media(min-width: 768px) {
-  .modal {
-    display: none;
-  }
-
   .myTasks__body {
     margin: 0 auto;
     width: 80vw;
   }
 
   .myTasks__title {
+    display: none;
+  }
+
+  .modal {
     display: none;
   }
 
@@ -525,6 +510,11 @@
 }
 
 @media(min-width: 1024px) {
+
+  .myTasks__header {
+    justify-content: space-between;
+  }
+
   .myTasks__title {
     display: block;
     color: #38404b;
@@ -559,7 +549,4 @@
     justify-self: flex-end;
   }
 
-  .myTasks__header {
-    justify-content: space-between;
-  }
 }
